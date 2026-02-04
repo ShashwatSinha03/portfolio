@@ -1,0 +1,49 @@
+.signal {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 var(--space-8);
+  position: relative;
+}
+
+.container {
+  max-width: var(--max-width);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.content {
+  max-width: 600px;
+}
+
+.role {
+  font-family: var(--font-primary);
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--accent);
+  margin-bottom: var(--space-4);
+  letter-spacing: -0.01em;
+}
+
+.bio {
+  font-family: var(--font-secondary);
+  font-size: 1.5rem;
+  line-height: 1.4;
+  color: var(--foreground);
+  opacity: 0.8;
+  font-weight: 400;
+}
+
+.microcopy {
+  position: absolute;
+  top: var(--space-8);
+  right: var(--space-8);
+  font-family: var(--font-tertiary);
+  font-size: 0.625rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  pointer-events: none;
+}
