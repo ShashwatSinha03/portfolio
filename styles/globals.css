@@ -57,6 +57,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.6;
   transition: var(--transition-theme);
+  will-change: transform, background-color;
 }
 
 
