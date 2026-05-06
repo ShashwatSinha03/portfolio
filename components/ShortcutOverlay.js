@@ -35,6 +35,7 @@ export default function ShortcutOverlay() {
             <p className={styles.label}>[System Shortcuts]</p>
             <ul className={styles.list}>
               <li><span>?</span> <span>Toggle this list</span></li>
+              <li><span>D</span> <span>Toggle Dashboard</span></li>
               <li><span>ESC</span> <span>Close</span></li>
             </ul>
             <p className={styles.note}>This list is for reference. Use it or ignore it.</p>

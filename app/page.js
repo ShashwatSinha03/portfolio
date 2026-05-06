@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { motion } from "motion/react";
 import ShortcutOverlay from "@/components/ShortcutOverlay";
+import Dashboard from "@/components/Dashboard";
 import Signal from "@/sections/Signal";
 import SelectedSystems from "@/sections/SelectedSystems";
 import Approach from "@/sections/Approach";
@@ -14,6 +15,7 @@ import Now from "@/sections/Now";
 export default function Home() {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(true);
+  const [isDashboardOpen, setIsDashboardOpen] = useState(false);
 
   useEffect(() => {
     // Console Easter egg
@@ -26,6 +28,18 @@ export default function Home() {
     } 
     
     setIsLoading(false);
+
+    const handleKeyDown = (e) => {
+      if (e.key.toLowerCase() === 'd') {
+        setIsDashboardOpen(prev => !prev);
+      }
+      if (e.key === 'Escape') {
+        setIsDashboardOpen(false);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
   }, [router]);
 
   if (isLoading) return null;
@@ -42,6 +56,7 @@ export default function Home() {
   return (
     <main style={{ padding: "0 var(--space-8)" }}>
       <ShortcutOverlay />
+      <Dashboard isOpen={isDashboardOpen} onClose={() => setIsDashboardOpen(false)} />
       <motion.div 
         initial="hidden"
         animate="visible"
