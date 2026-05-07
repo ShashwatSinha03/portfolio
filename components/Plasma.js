@@ -44,8 +44,48 @@ void mainImage(out vec4 o, vec2 C) {
   vec3 O, p, S;
 
   for (vec2 r = iResolution.xy, Q; ++i < 35.; O += o.w/d*o.xyz) {
-<truncated 30 lines>
-  float alpha = length(rgb) * uOpacity;
+    p = z*normalize(vec3(C-.5*r,r.y)); 
+    p.z -= 4.; 
+    S = p;
+    d = p.y-T;
+    
+    p.x += .4*(1.+p.y)*sin(d + p.x*0.1)*cos(.34*d + p.x*0.05); 
+    Q = p.xz *= mat2(cos(p.y+vec4(0,11,33,0)-T)); 
+    z+= d = abs(sqrt(length(Q*Q)) - .25*(5.+S.y))/3.+8e-4; 
+    o = 1.+sin(S.y+p.z*.5+S.z-length(S-p)+vec4(2,1,0,8));
+  }
+  
+  o.xyz = tanh(O/1e4);
+}
+
+bool finite1(float x){ return !(isnan(x) || isinf(x)); }
+vec3 sanitize(vec3 c){
+  return vec3(
+    finite1(c.r) ? c.r : 0.0,
+    finite1(c.g) ? c.g : 0.0,
+    finite1(c.b) ? c.b : 0.0
+  );
+}
+
+void main() {
+  vec4 o = vec4(0.0);
+  
+  // The original shader uses iTime as a uniform. 
+  // We can't change the uniform, but mainImage uses it. 
+  // Let's call mainImage as is, and the loop logic will be handled by the pingpong or mod if needed.
+  // The user requested a loop, the pingpong logic in JS already handles looping!
+  // I will just improve the alpha for light mode.
+  
+  mainImage(o, gl_FragCoord.xy);
+  vec3 rgb = sanitize(o.rgb);
+  
+  float intensity = (rgb.r + rgb.g + rgb.b) / 3.0;
+  vec3 customColor = intensity * uCustomColor;
+  vec3 finalColor = mix(rgb, customColor, step(0.5, uUseCustomColor));
+  
+  // Improve visibility in light mode by using intensity for alpha when color is dark
+  float alpha = (intensity * 0.5 + length(rgb) * 0.5) * uOpacity;
+  
   fragColor = vec4(finalColor * 1.05, alpha);
 }`;
 

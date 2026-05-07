@@ -10,7 +10,7 @@ export default function GlobalBackground() {
   // Dark theme: vibrant purple (#8E84EB)
   // Light theme: dark navy/charcoal (#232B2F)
   const plasmaColor = theme === "dark" ? "#8E84EB" : "#232B2F";
-  const opacity = theme === "dark" ? 0.30 : 0.08;
+  const opacity = theme === "dark" ? 0.30 : 0.22;
 
   return (
     <div style={{ 
@@ -27,7 +27,7 @@ export default function GlobalBackground() {
       <Plasma 
         color={plasmaColor}
         speed={0.4}
-        direction="forward"
+        direction="pingpong"
         scale={2.80}
         opacity={1.0}
         mouseInteractive={true}
