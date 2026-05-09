@@ -6,7 +6,7 @@ const projects = [
   {
     title: "Harvest Bakery",
     subtitle: "Editorial Café Experience",
-    link: "https://harvest-bakery.example.com",
+    link: "https://harvest-bakery.vercel.app/",
     tabs: {
       Overview: (
         <div>

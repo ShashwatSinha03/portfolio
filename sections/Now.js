@@ -93,7 +93,7 @@ export default function Now() {
 
       <div className={styles.ctaWrapper}>
         <p className={styles.ctaText}>If this resonates, let’s talk.</p>
-        <a href="mailto:shashwat@example.com" className={styles.ctaLink}>shashwat@example.com</a>
+        <a href="mailto:sinhashashwat21@gmail.com" className={styles.ctaLink}>sinhashashwat21@gmail.com</a>
         <div className={styles.ctaSocial}>
           <a href="https://linkedin.com/in/shashwat" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </div>
