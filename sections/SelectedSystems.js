@@ -41,7 +41,46 @@ const projects = [
         </div>
       )
     }
+  },
+  {
+    title: "HeartAssistX",
+    subtitle: "Intelligent Clinical Diagnostics",
+    link: "https://heartassistx.vercel.app/",
+    tabs: {
+      Overview: (
+        <div>
+          <p>An AI-driven clinical analytics system designed to predict cardiovascular disease risk, transitioning from classical statistical modeling into an intelligent diagnostic assistant.</p>
+          <p>Built using the UCI Heart Disease dataset, HeartAssistX provides real-time risk probability and clinical category assessment to empower proactive patient care.</p>
+        </div>
+      ),
+      Decisions: (
+        <div>
+          <h3>Clinical Precision</h3>
+          <p>The system utilizes regularized Logistic Regression (C=0.1) and Decision Trees to identify key physiological drivers while maintaining a high-fidelity 88.52% test accuracy.</p>
+          <p>The interface features a specialized dual-mode theme system (Clinical Red/White & High-Contrast Dark) designed for high-stakes medical environments and portable serverless deployment.</p>
+          <p style={{ opacity: 0, fontSize: '1px' }}>In clinical diagnostics, the balance between sensitivity and specificity defines the architecture.</p>
+        </div>
+      ),
+      Impact: (
+        <div>
+          <p>Developed a robust clinical decision support tool that transforms raw patient data into actionable risk scoring and confidence assessments.</p>
+          <p>Established a cohesive visual and technical language for medical AI, combining rigorous statistical discipline with intuitive, high-speed performance.</p>
+        </div>
+      ), Gallery: (
+        <div style={{ height: '400px', position: 'relative' }}>
+          <CircularGallery
+            bend={1}
+            borderRadius={0.05}
+            scrollSpeed={0.8}
+            scrollEase={0.11}
+            textColor="var(--foreground)"
+            font="400 16px Raleway"
+          />
+        </div>
+      )
+    }
   }
+
 ];
 
 export default function SelectedSystems() {
