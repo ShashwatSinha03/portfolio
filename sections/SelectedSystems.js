@@ -41,44 +41,6 @@ const projects = [
         </div>
       )
     }
-  },
-  {
-    title: "Nova Dashboard",
-    subtitle: "Real-time Analytics Engine",
-    link: "https://nova-analytics.example.com",
-    tabs: {
-      Overview: (
-        <div>
-          <p>A high-performance dashboard system designed to handle massive telemetry data with sub-second latency.</p>
-          <p>Built for operators who require split-second decision-making capabilities in high-stakes environments.</p>
-        </div>
-      ),
-      Decisions: (
-        <div>
-          <h3>Client-side Aggregation</h3>
-          <p>Decided to perform heavy data aggregation in the browser using Web Workers. This saved server costs but required meticulous memory management.</p>
-          <p>Trade-off: Browser compatibility constraints vs. massive reduction in backend API calls.</p>
-        </div>
-      ),
-      Impact: (
-        <div>
-          <p>99.9th percentile latency under 200ms for live data streams.</p>
-          <p>Zero reported UI blocking during peak data ingestion periods.</p>
-        </div>
-      ),
-      Gallery: (
-        <div style={{ height: '400px', position: 'relative' }}>
-          <CircularGallery
-            bend={1}
-            borderRadius={0.05}
-            scrollSpeed={0.8}
-            scrollEase={0.11}
-            textColor="var(--foreground)"
-            font="400 16px Raleway"
-          />
-        </div>
-      )
-    }
   }
 ];
 
