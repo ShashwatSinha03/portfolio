@@ -95,7 +95,7 @@ export default function Now() {
         <p className={styles.ctaText}>If this resonates, let’s talk.</p>
         <a href="mailto:sinhashashwat21@gmail.com" className={styles.ctaLink}>sinhashashwat21@gmail.com</a>
         <div className={styles.ctaSocial}>
-          <a href="https://linkedin.com/in/shashwat" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/sinhashashwat21/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </div>
       </div>
     </section>
