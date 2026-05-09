@@ -4,33 +4,33 @@ import styles from './Section.module.css';
 
 const projects = [
   {
-    title: "Orion Platform",
-    subtitle: "Enterprise Design System",
-    link: "https://orion-design.example.com",
+    title: "Harvest Bakery",
+    subtitle: "Editorial Café Experience",
+    link: "https://harvest-bakery.example.com",
     tabs: {
       Overview: (
         <div>
-          <p>A unified design language for a multi-product ecosystem, focused on scalability and developer ergonomics.</p>
-          <p>Orion serves 40+ independent teams, providing a singular source of truth for UI patterns, accessibility standards, and token-driven styles.</p>
+          <p>A premium bakery and brunch café experience designed with an editorial-first visual system focused on warmth, atmosphere, and timeless minimalism.</p>
+          <p>Harvest Bakery blends cinematic storytelling, handcrafted textures, and refined typography to create a calm digital experience inspired by modern café culture and slow living aesthetics.</p>
         </div>
       ),
       Decisions: (
         <div>
-          <h3>Component Modularization</h3>
-          <p>We chose a multi-package repository structure over a monolithic build. This increased initial complexity but allowed teams to adopt features at their own pace.</p>
-          <p>Trade-off: Higher maintenance overhead for versioning vs. total stability for downstream users.</p>
-          <p style={{ opacity: 0, fontSize: '1px' }}>This part took longer than expected. It always does.</p>
+          <h3>Editorial Minimalism</h3>
+          <p>The interface was intentionally designed with restrained motion, oversized spacing, and a limited cream-and-brown palette to preserve a quiet premium atmosphere.</p>
+          <p>Instead of relying on traditional product cards, the layout uses asymmetrical grids, immersive imagery, and typography-driven hierarchy to create a more emotional and believable café experience.</p>
+          <p style={{ opacity: 0, fontSize: '1px' }}>The smallest spacing decisions ended up shaping the entire mood.</p>
         </div>
       ),
       Impact: (
         <div>
-          <p>Reduced time-to-market for new features by 40%.</p>
-          <p>Achieved 100% WCAG 2.1 compliance across all core components.</p>
+          <p>Created a portfolio-level brand presentation that feels authentic, cinematic, and investor-ready.</p>
+          <p>Established a cohesive visual language combining Apple-inspired spacing discipline with Airbnb-style warmth and hospitality.</p>
         </div>
       ),
       Gallery: (
         <div style={{ height: '400px', position: 'relative' }}>
-          <CircularGallery 
+          <CircularGallery
             bend={1}
             borderRadius={0.05}
             scrollSpeed={0.8}
@@ -68,7 +68,7 @@ const projects = [
       ),
       Gallery: (
         <div style={{ height: '400px', position: 'relative' }}>
-          <CircularGallery 
+          <CircularGallery
             bend={1}
             borderRadius={0.05}
             scrollSpeed={0.8}
@@ -84,8 +84,8 @@ const projects = [
 
 export default function SelectedSystems() {
   return (
-    <section 
-      className={styles.section} 
+    <section
+      className={styles.section}
       id="selected-systems"
     >
       <h2 className={styles.title}>Selected Systems</h2>

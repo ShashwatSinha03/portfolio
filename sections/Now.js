@@ -7,7 +7,7 @@ import styles from './Section.module.css';
 const nowData = {
   Building: [
     { title: "Personal Systems", detail: "Refining this portfolio's architectural constraints and aesthetic discipline." },
-    { title: "Automation Frameworks", detail: "Exploring modular agentic workflows for scalable engineering tasks." },
+    { title: "Automation/Agentic Frameworks", detail: "Exploring modular agentic workflows for scalable engineering tasks." },
     { title: "Design Systems", detail: "Standardizing component patterns for cross-platform reliability." }
   ],
   Learning: [
